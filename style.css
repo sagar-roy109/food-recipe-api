@@ -25,3 +25,19 @@ a{
     margin: 0;
     padding: 10px 0;
 }
+
+
+@media all and (max-width:768px){
+    .result-container .food{
+        width: 48%;
+        margin-right: 2%;
+        margin-bottom: 20px;
+    }
+}
+@media all and (max-width:500px){
+    .result-container .food{
+        width: 100%;
+        
+        margin-bottom: 20px;
+    }
+}

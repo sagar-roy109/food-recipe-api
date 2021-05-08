@@ -1,0 +1,27 @@
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+.result-container{
+    display: flex;
+    flex-wrap: wrap;
+   
+    
+}
+
+.result-container .food{
+    width: 31.33%;
+    margin-right: 2%;
+    margin-bottom: 20px;
+}
+
+.result-container .food-name {
+    background-color: rgb(240, 239, 239);
+
+}
+
+.result-container .food-name h4{
+    margin: 0;
+    padding: 10px 0;
+}

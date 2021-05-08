@@ -85,7 +85,7 @@ function searchOutput(result) {
 
         resultContainer.appendChild(food);
 
-        console.log(result[i]);
+        
 
 
 

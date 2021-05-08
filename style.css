@@ -1,7 +1,25 @@
+body{
+    background: #fff8dc;
+}
+
 a{
     text-decoration: none;
     color: #000;
 }
+
+.search-area{
+    width: 60%;
+    margin: auto;
+}
+.search-area button,
+.search-area button:focus,
+.search-area button:active,
+.search-area button:hover{
+    background: #ea571d;
+    border: none;
+}
+
+
 
 .result-container{
     display: flex;

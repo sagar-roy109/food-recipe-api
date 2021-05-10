@@ -1,26 +1,38 @@
-// API URL 
+// Enter Button Trigger
+
+const searchFoodField = document.getElementById('searchFood');
+searchFoodField.addEventListener("keyup", function(event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.key === 'Enter') {
+    
+  // Trigger the button element with a click
+    document.getElementById("searchButton").click();
+  }
+}); 
 
 
-
-
+// Catch Api 
 
 function getSearch() {
+  toggleSpinner();
     const foodName = document.getElementById('searchFood').value;
     const url = 'https://www.themealdb.com/api/json/v1/1/search.php?s=' + foodName;
-
+    
     fetch(url)
         .then(res => res.json())
         .then(data => searchOutput(data.meals))
         .catch(error => console.log(error) );
 
-
+    document.getElementById('resultContainer').innerHTML = '';
 
 }
 
+
+// Show Results 
+
 function searchOutput(result) {
-
-    document.getElementById('resultContainer').innerHTML = '';
-
+    
+    toggleSpinner();
     for (let i = 0; i < 12; i++) {
 
         const foodName = result[i].strMeal;
@@ -90,5 +102,18 @@ function searchOutput(result) {
 
 
     }
+    
+
+    
 }
+
+// Toggle Spinner 
+
+function toggleSpinner(){
+
+  const spinner = document.getElementById('spinner').classList;
+  spinner.toggle('d-none');
+  
+}
+
 
